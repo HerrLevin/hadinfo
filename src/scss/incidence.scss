@@ -1,0 +1,39 @@
+.incidence-header {
+  height: 100%;
+  color: white;
+  padding: 1rem;
+}
+.incidence-low {
+  @extend .incidence-header;
+  background: rgb(87, 177, 96);
+}
+
+.incidence-medium {
+  @extend .incidence-header;
+  background: rgb(226, 203, 49);
+}
+
+.incidence-severe {
+  @extend .incidence-header;
+  background: rgb(195, 72, 56);
+}
+
+.incidence-title {
+  font-weight: bolder;
+  font-size: 4rem;
+}
+
+.incidence-subtitle {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.virus-image {
+  height: auto;
+  margin-bottom: 40px;
+  width: 125px;
+}
+
+.virus-image .body {
+  fill: white;
+}
