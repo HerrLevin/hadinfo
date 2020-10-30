@@ -18,17 +18,27 @@
   background: rgb(195, 72, 56);
 }
 
+.incidence-info {
+  @extend .incidence-header;
+  background: #17a2b8;
+}
+
 .incidence-title {
   font-weight: bolder;
-  font-size: 6rem;
+  font-size: 10rem;
 }
 
 .incidence-subtitle {
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 5rem;
+}
+
+.incidence-text {
+  font-size: 2.5rem
 }
 
 .virus-image {
+  font-size: 10rem;
   height: auto;
   margin-bottom: 40px;
   width: 125px;

@@ -140,18 +140,26 @@ module.exports = (env, argv) => {
                 },
 
                 // fonts loader
+                // {
+                //     test: /\.(woff|woff2|eot|ttf|otf)$/,
+                //     use: [
+                //         {
+                //             loader: "file-loader",
+                //             options: {
+                //                 name: "fonts/[name].[ext]"
+                //             }
+                //         },
+                //     ],
+                // },
                 {
-                    test: /\.(woff|woff2|eot|ttf|otf)$/,
-                    use: [
-                        {
-                            loader: "file-loader",
-                            options: {
-                                name: "fonts/[name].[ext]"
-                            }
+                    test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+                    use: {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
                         },
-                    ],
+                    },
                 },
-
                 // svg inline 'data:image' loader
                 {
                     test: /\.svg$/,
