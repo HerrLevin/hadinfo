@@ -40,7 +40,7 @@ function updateDM() {
             }
         }
         dmCount.innerHTML = counter;
-        dmCountEng = counter;
+        dmCountEng.innerHTML = counter;
         if (counter < 480) {
             dmColor.className = 'incidence-severe';
             dmColorEng.className = 'incidence-severe';
@@ -53,7 +53,7 @@ function updateDM() {
         } else {
             dmColor.className = 'incidence-low';
             dmText.innerHTML = 'Es ist genug Klopapier in ' + cityName + ' vorhanden!';
-            dmText.innerHTML = 'There is enough toilet paper in ' + cityName + '!';
+            dmTextEng.innerHTML = 'There is enough toilet paper in ' + cityName + '!';
         }
     });
 }
@@ -71,7 +71,7 @@ function updateRKI() {
         incidenceField.innerHTML = casesCount;
         incidenceFieldEng.innerHTML = casesCount;
         incidenceText.innerHTML = cityName + ' ist ein Covid-19 Hotspot.'
-        incidenceTextEng.innerHTML = cityName + ' is Covid-19 hotspot.'
+        incidenceTextEng.innerHTML = cityName + ' is a Covid-19 hotspot.'
         if (casesCount < 35) {
             incidenceColor.className = 'incidence-low';
             incidenceText.innerText = cityName + ' ist kein Covid-19 Hotspot.'
@@ -89,6 +89,6 @@ function updateRKI() {
 $(document).ready(function(){
     updateRKI();
     updateDM();
-    setInterval(updateRKI,10000);
-    setInterval(updateDM,10000);
+    setInterval(updateRKI,100000);
+    setInterval(updateDM,100000);
 });
